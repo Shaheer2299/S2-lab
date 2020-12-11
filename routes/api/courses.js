@@ -3,12 +3,12 @@ var router = express.Router();
 var Course = require("../../models/course");
 router.get("/", async (req, res) => {
   var courses = await Course.find();
-  console.log("here");
+
   res.render("courses/index", { courses });
 });
 
 router.get("/add", async (req, res) => {
-  console.log("hereee");
+
   res.render("courses/add");
 });
 
